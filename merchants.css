@@ -69,6 +69,8 @@
   }
   
   .flex-child-element {
+    color: white;
+    font-family: "Dosis", sans-serif;
     flex: 1;
     border: 2px solid blueviolet;
     margin: 10px;
