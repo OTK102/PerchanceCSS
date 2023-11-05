@@ -60,3 +60,10 @@
     text-align: justify;
     text-justify: inter-word;
   }
+
+  nav {
+    float: left;
+    width: 30%;
+    background: #ccc;
+    padding: 20px;
+  }
