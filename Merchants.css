@@ -62,7 +62,7 @@
   }
 
   .card cText {
-    margin: auto;
+    padding: 30px;  
   }
 
   .card button {
