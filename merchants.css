@@ -63,12 +63,5 @@
     margin: auto;
     padding: 20px;
     position: relative;
-    width: fit-content;
-  }
-
-  .stock {
-    line-height: 2;
-    text-justify: auto;
-    text-align: center;
-    width: 60%;
+    width: 50%;
   }
