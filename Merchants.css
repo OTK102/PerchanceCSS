@@ -47,10 +47,17 @@
     font-family: "Dosis", sans-serif;
   }
 
-  .card {
+  .container {
     background-color: SlateGrey;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+    width: 50%;
+  }
+
+  .card {
     box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
     display:inline-block;
-    width:auto;
-    padding: 20px;
   }
+
+
