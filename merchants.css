@@ -33,7 +33,7 @@
   }
 
   .textIcon {
-    background-color: #SlateGrey;
+    background-color: SlateGrey;
     color: white;
     font-family: "Dosis", sans-serif;
     font-size: 16px;
@@ -48,7 +48,7 @@
   }
 
   .containerAlt {
-    background-color: black;
+    background-color: SlateGrey;
     box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
     display:inline-block;
     margin: auto;
