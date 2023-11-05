@@ -60,6 +60,12 @@
   .flex-parent-element {
     display: flex;
     width: 50%;
+    background-color: SlateGrey;
+    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+    display:inline-block;
+    margin: auto;
+    padding: 20px;
+    position: relative;
   }
   
   .flex-child-element {
