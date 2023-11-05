@@ -63,12 +63,11 @@
     margin: auto;
     padding: 20px;
     position: relative;
-    width: 40%;
+    width: fit-content;
   }
 
   .stock {
     line-height: 2;
-    margin: auto;
     text-justify: auto;
     text-align: center;
     width: 60%;
