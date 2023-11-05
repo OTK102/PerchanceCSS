@@ -56,3 +56,9 @@
     width: 50%;
   }
 
+  .stock {
+    line-height: 2;
+    text-justify: auto;
+    text-align: center;
+    width: 60%;
+  }
