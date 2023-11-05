@@ -58,6 +58,7 @@
 
   .stock {
     line-height: 2;
+    margin: auto;
     text-justify: auto;
     text-align: center;
     width: 60%;
