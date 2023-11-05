@@ -48,7 +48,7 @@
   }
 
   .containerAlt {
-    background-color: SlateGrey;
+    background-color: black;
     box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
     display:inline-block;
     margin: auto;
@@ -57,7 +57,17 @@
     width: 50%;
   }
 
-  .card {
+  .flex-parent-element {
+    display: flex;
+    width: 50%;
   }
-
-
+  
+  .flex-child-element {
+    flex: 1;
+    border: 2px solid blueviolet;
+    margin: 10px;
+  }
+  
+  .flex-child-element:first-child {
+    margin-right: 20px;
+  }
