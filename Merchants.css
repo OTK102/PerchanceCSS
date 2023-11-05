@@ -53,16 +53,12 @@
     margin: auto;
     text-align: center;
     font-family: arial;
-    padding: 16px 32px;
+    padding: 32px;
   }
 
   .price {
     color: grey;
     font-size: 22px;
-  }
-
-  .card cText {
-    padding: 30px;  
   }
 
   .card button {
