@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- META -->
+    <title>JS Inventory Management</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Experimental JS Inventory System">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+
+    <!-- ICONS -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="white">
+    <link rel="apple-touch-icon" href="images/icon-512.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="JS Inventory">
+    <meta name="msapplication-TileImage" content="images/icon-512.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <!-- MANIFEST -->
+    <link rel="manifest" href="js-inventory-manifest.json">
+
+    <!-- INVENTORY CSS + JS -->
+    <link rel="stylesheet" href="js-inventory.css">
+    <script src="js-inventory-db.js"></script>
+    <script src="js-inventory-items.js"></script>
+    <script src="js-inventory-move.js"></script>
+    <script src="js-inventory.js"></script>
+  </head>
+  <body>
+    <!-- (A) PAGE A : ITEMS LIST -->
+    <div id="pgA" class="ninja">
+      <div id="itemAdd" onclick="items.addEdit()">+</div>
+      <div id="itemList" class="zebra"></div>
+    </div>
+
+    <!-- (B) PAGE B : ADD ITEM -->
+    <form id="pgB" class="ninja" onsubmit="items.save(); return false;">
+      <label>SKU</label>
+      <input type="hidden" id="itemOSKU">
+      <input type="text" required id="itemSKU">
+      <label>Name</label>
+      <input type="text" required id="itemName">
+      <div id="itemGo" class="flex">
+        <input type="button" value="Back" onclick="inv.pg('A')">
+        <input type="submit" value="Save">
+      </div>
+    </form>
+
+    <!-- (C) PAGE C : MOVEMENT -->
+    <div id="pgC" class="ninja">
+      <!-- (C1) MOVEMENT FORM -->
+      <form onsubmit="move.save(); return false;">
+        <label>SKU</label>
+        <input type="text" readonly id="moveSKU">
+        <label>Direction</label>
+        <select id="moveDirection">
+          <option value="I">In</option>
+          <option value="O">Out</option>
+          <option value="T">Stock Take</option>
+        </select>
+        <label>Quantity</label>
+        <input type="number" required id="moveQty">
+        <div id="mGo" class="flex">
+          <input type="button" value="Back" onclick="inv.pg('A')">
+          <input type="submit" value="Save">
+        </div>
+      </form>
+
+      <!-- (C2) MOVEMENT HISTORY -->
+      <div id="moveList" class="zebra"></div>
+      <input id="moveBack" type="button" value="Back" onclick="inv.pg('A')">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+/* (A) UNIVERSAL */
+/* (A1) LAYOUT */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 15px;
+}
+.ninja { display: none; }
+.flex {
+  display: flex;
+  align-items: stretch;
+}
+.grow { flex-grow: 1; }
+.bold { font-weight: 700; }
+
+/* (A2) ZEBRA STRIPE LIST */
+.zebra .row:nth-child(odd) { background: #f2f2f2; }
+.zebra .row { margin-top: 10px; }
+.zebra input {
+  margin: 0;
+  padding: 0 15px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #898989 !important;
+  background: transparent !important;
+}
+.zebra .grow { padding: 10px; }
+
+/* (A3) FORM */
+form {
+  padding: 20px;
+  background: #f2f2f2;
+}
+input, label, select {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+input, select { padding: 10px; }
+button, input[type=button], input[type=submit] {
+  width: auto;
+  border: 0;
+  color: #fff;
+  background: #a70000;
+  cursor: pointer;
+}
+#itemGo input, #mGo input {
+  margin: 1px;
+  width: 50%;
+}
+
+/* (B) ITEMS LIST */
+#itemAdd {
+  padding: 15px 0;
+  margin-bottom: 10px;
+  color: #898989;
+  border: 2px dashed #aaa;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* (C) MOVEMENT LIST */
+.moveQty {
+  padding: 20px;
+  font-weight: 700;
+  font-size: 24px;
+}
+#moveBack {
+  width: 100%;
+  margin-top: 20px;
+}
