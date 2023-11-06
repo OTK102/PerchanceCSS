@@ -1,0 +1,35 @@
+﻿Item,Price,Stock,Description
+"Ale, generic",4 cp/mug,"[dice(""1d4"")*100] mugs",Whatever ale the merchant has on-hand
+"Ale, Thane’s Choice",25 gp/mug,"[dice(""1d4"")*10] mugs",Drink a mug: facial hair grows perceptibly
+Bead of refreshment,50 gp,"[dice(""1d4"")*2] each",
+Brandy,5 gp/bottle,"[dice(""1d4"")*2] bottles",
+Brewer’s supplies,20 gp,"[dice(""1d4"")] each",
+Decanter of endless water,500 gp,"Only 1, ever",
+"Drinking horn, ivory","7,500 gp","Only 1, ever",Bejeweled with gold filigree; for a dwarven thane
+Flask or tankard,2 cp,"[dice(""1d4"")*15] each",Made of either pewter or treated wood
+Green copper ewer,"5,000 gp","Only 1, ever",Conjures 1 gal. of wine/day; turns poison into wine
+Hot chocolate,1 sp/cup,"[dice(""1d4"")*10] cups",
+"Juice, fruit",3 cp/mug,"[dice(""1d4"")*25] cups",Of any variety
+"Mead, common",1 sp/mug,"[dice(""1d4"")*100] mugs",A popular spiced honey wine
+"Mead, Evermead",25 gp/mug,"[dice(""1d4"")*10] mugs",An extremely rare elven mead that tastes like pure bliss
+Milk,1 sp/bottle,"[dice(""1d4"")*5] bottles","Goat, cow, or other"
+Moonshine,3 sp/bottle,"[dice(""1d4"")*5] bottles",Disadv. on saves to avoid intoxication
+"Mug, brass masterwork",250 gp,"[dice(""1d4"")] each",Holds 1 pint; has jade inset in a beautiful pattern
+Rum,8 gp/bottle,"[dice(""1d4"")*2] bottles",
+Tankard of plenty,"5,000 gp","Only 1, ever","Magically fills with 3 pints of dwarven ale, 3x/day"
+Tankard of sobriety,100 gp,"Only 1, ever",
+Tea set,50 gp,"[dice(""1d4"")] each",Perfect for traditional tea ceremonies
+"Tea, dwarven kaeth",15 gp/cup,"[dice(""1d4"")*2] cups",Drink a cup: immune to sleep for 8 hours
+"Tea, earth dragon’s eye",6 cp/cup,"[dice(""1d4"")*5] cups",Black tea; increases movement speed by 5 ft. for 1 hr.
+"Tea, jethur",3 gp/cup,"[dice(""1d4"")*2] cups","Purple and savory, cures drunkeness for 2 hrs."
+"Tea, kaeth",1 sp/cup,"[dice(""1d4"")*10] cups",Brewed ground caffeinated beans; also called “coffee”
+"Tea, long jing",5 gp/cup,"[dice(""1d4"")*5] cups",Green tea; grants resistance to poison dmg. for 1 hr.
+"Tea, portentous",20 gp/cup,"[dice(""1d4"")*2] cups",The leaves in the cup’s bottom hint at the future
+Tequila,8 gp/bottle,"[dice(""1d4"")*2] bottles",
+Vodka,8 gp/bottle,"[dice(""1d4"")*3] bottles",
+Water,1 cp/cup,"[dice(""1d4"")*100] cups",Clean and pure
+Whiskey,5 sp/bottle,"[dice(""1d4"")*4] bottles",
+"Wine, common",5 sp/bottle,"[dice(""1d4"")*5] bottles","One of many other varieties of simple, cheap wine"
+"Wine, elven",25 gp/cup,"[dice(""1d4"")*2] cups",Drink a cup: cures the poisoned condition
+"Wine, fine",10 gp/bottle,"[dice(""1d4"")*4] bottles",One of many other varieties of fine wine
+Yeast,4 cp/lb.,"[dice(""1d4"")*2] lbs.",
