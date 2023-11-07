@@ -17,6 +17,7 @@
   font-size: 1rem;
   line-height: 23px;
   outline: none;
+  margin: 12px;
   padding: .75rem;
   text-decoration: none;
   transition: all 235ms ease-in-out;
