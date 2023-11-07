@@ -70,6 +70,11 @@
   height: 100%; 
 }
 
+a {
+  color: black;
+  margin: 8px;
+}
+
 h1 {
   font-family: [fontHeader];
   color: white;
