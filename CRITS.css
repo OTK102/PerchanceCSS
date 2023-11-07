@@ -56,7 +56,7 @@
 }
 
 .drop {
-  margin-left: 16px;
+  background-color:[options.buttonColor]
   width: 100px;
 }
 
