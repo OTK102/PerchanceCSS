@@ -65,7 +65,7 @@
 
 .font {
   color: #fff;
-  font-family: Dosis;
+  font-family: 'Dosis';
   text-align: center;
   font-size: 0.8rem;
   line-height: 150%;
@@ -79,7 +79,7 @@
 }
 
 h1 {
-  font-family: Permanent Marker;
+  font-family: 'Permanent Marker';
   color: white;
   text-transform: uppercase;
   font-size: 1.6rem;
