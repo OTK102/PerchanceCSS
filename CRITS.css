@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker');
+
 .button-hit {
   --b: 3px;   /* border thickness */
   --s: .45em; /* size of the corner */
@@ -56,13 +59,13 @@
 }
 
 .drop {
-  background-color:"[options.buttonColor]"
+  background-color: SlateGrey;
   width: 100px;
 }
 
 .font {
   color: #fff;
-  font-family: "[fontBody]";
+  font-family: Dosis;
   text-align: center;
   font-size: 0.8rem;
   line-height: 150%;
@@ -76,7 +79,7 @@
 }
 
 h1 {
-  font-family: "[fontHeader]";
+  font-family: Permanent Marker;
   color: white;
   text-transform: uppercase;
   font-size: 1.6rem;
