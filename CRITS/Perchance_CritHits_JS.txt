@@ -1,0 +1,454 @@
+//Plugins
+dice = {import:dice-plugin}
+icon = {import:icon-plugin}
+
+//Damage Types
+Bludgeoning
+Magical
+Piercing
+Slashing
+
+//Options
+options
+  backgroundColor = DarkSlateGrey // Choose color here:         htmlcolorcodes.com/color-names/
+  fontName = Dosis // Choose a font name from here:  fonts.google.com
+  textColor = AliceBlue
+  iconSRC = 
+  iconSize = 150
+  buttonText = Hit!
+  buttonColor = SlateGrey
+  iconButton = [icon("check")]
+
+//Buttons
+buttonText = [options.buttonText]
+
+//Result Shorthand
+pcBludgeoning = [pcDamage.pcBludgeoning]
+pcMagical = [pcDamage.pcMagical]
+pcPiercing = [pcDamage.pcPiercing]
+pcSlashing = [pcDamage.pcSlashing]
+eBludgeoning = [enemyDamage.eBludgeoning]
+eMagical = [enemyDamage.eMagical]
+ePiercing = [enemyDamage.ePiercing]
+eSlashing = [enemyDamage.eSlashing]
+
+//Results
+pcDamage
+
+  pcBludgeoning
+    <b>Bashed nose</b>. Double damage.
+    <b>Bonk on the noggin</b>. Maximum damage.
+    <b>Nighty night!</b> Double damage, and the target must make a DC 12 Constitution saving throw. On a failed save, the target is knocked unconscious.
+    <b>Stunning blow</b>. Maximum damage, and the target must make a DC 12 Constitution saving throw. On a failed save, the target is stunned.
+    <b>Gut punch</b>. Double damage.
+    <b>Winded</b>. Maximum damage.
+    <b>Soften ‘em up</b>. Double damage, and the target must make a DC 12 Constitution saving throw. On a failed save, the target has disadvantage on saving throws until the end of their next turn.
+    <b>Get back!</b> Maximum damage, and the target must make a DC 12 Constitution saving throw. On a failed save, the target is pushed back 5 ft.
+    <b>Low blow</b>. Double damage.
+    <b>Shin bash</b>. Maximum damage.
+    <b>...And stay down.</b> Double damage, and the target must make a DC 12 Constitution saving throw. On a failed save, the target is knocked prone.
+    <b>Something slipped</b>. Maximum damage, and the target’s AC is reduced by 1d4 until the end of its next turn.
+    <b>Rap on the knuckles</b>. Double damage.
+    <b>Battered shoulder</b>. Maximum damage.
+    <b>Drop it!</b> Double damage, and the target must make a DC 12 Strength or Dexterity saving throw. On a failed save, the target drops what they are holding (GM decides which hand, or determines randomly).
+    <b>Bruised joints</b>. Maximum damage, and the target must make a DC 12 Constitution saving throw. On a failed save, the target has disadvantage on its next melee attack.
+    <b>Bashed nose</b>. Triple damage.
+    <b>Bonk on the noggin</b>. Maximum damage, and roll the damage dice again.
+    <b>Nighty night!</b> Triple damage, and the target must make a DC 14 Constitution saving throw. On a failed save, the target is knocked unconscious.
+    <b>Stunning blow</b>. Maximum damage, and the target must make a DC 14 Constitution saving throw. On a failed save, the target is stunned.
+    <b>Gut punch</b>. Triple damage.
+    <b>Winded</b>. Maximum damage, and roll the damage dice again.
+    <b>Soften ‘em up</b>. Triple damage, and the target must make a DC 14 Constitution saving throw. On a failed save, the target has disadvantage on saving throws for 1d4 + 1 rounds.
+    <b>Get back!</b> Maximum damage, and the target must make a DC 14 Constitution saving throw. On a failed save, the target is pushed back 10 ft.
+    <b>Low blow</b>. Triple damage.
+    <b>Shin bash</b>. Maximum damage, and roll the damage dice again.
+    <b>...And stay down.</b> Triple damage, and the target must make a DC 14 Constitution saving throw. On a failed save, the target is knocked prone.
+    <b>Something slipped</b>. Maximum damage, and the target’s AC is reduced by 2d4 until the end of its next turn.
+    <b>Rap on the knuckles</b>. Triple damage.
+    <b>Drop it!</b> Triple damage, and the target must make a DC 14 Strength or Dexterity saving throw. On a failed save, the target drops what they are holding (GM decides which hand, or determines randomly).
+    <b>Bruised joints</b>. Maximum damage, and the target must make a DC 14 Constitution saving throw. On a failed save, the target has disadvantage on attacks for 1d4 + 1 rounds.
+    <b>Bashed nose</b>. Quadruple damage.
+    <b>Bonk on the noggin</b>. Maximum double damage.
+    <b>Nighty night!</b> Quadruple damage, and the target must make a DC 16 Constitution saving throw. On a failed save, the target is knocked unconscious.
+    <b>Stunning blow</b>. Maximum damage, and the target must make a DC 16 Constitution saving throw. On a failed save, the target is stunned.
+    <b>Gut punch</b>. Quadruple damage.
+    <b>Winded</b>. Maximum double damage.
+    <b>Soften ‘em up</b>. Quadruple damage, and the target must make a DC 16 Constitution saving throw. On a failed save, the target has disadvantage on saving throws for 2d4 + 2 rounds.
+    <b>Get back!</b> Maximum damage, and the target must make a DC 16 Constitution saving throw. On a failed save, the target is pushed back 15 ft.
+    <b>Low blow</b>. Quadruple damage.
+    <b>Shin bash</b>. Maximum double damage.
+    <b>...And stay down.</b> Quadruple damage, and the target must make a DC 16 Constitution saving throw. On a failed save, the target is knocked prone.
+    <b>Something slipped</b>. Maximum damage, and the target’s AC is reduced by 3d4 until the end of its next turn.
+    <b>Rap on the knuckles</b>. Quadruple damage.
+    <b>Bruised joints</b>. Maximum damage, and the target must make a DC 16 Constitution saving throw. On a failed save, the target has disadvantage on attacks for 2d4 + 2 rounds.
+    <b>Drop it!</b> Quadruple damage, and the target must make a DC 16 Strength or Dexterity saving throw. On a failed save, the target drops what they are holding (GM decides which hand, or determines randomly).
+    <b>Nighty night!</b> Quadruple damage and, if the damage the target takes is equal to or greater than 1/4 of its maximum hit points, it is knocked unconscious.
+    <b>Tenderizer</b>. Quadruple damage, and the target becomes vulnerable to Bludgeoning damage for 1 minute.
+    <b>Shattered knee</b>. Quadruple damage, and the target’s speed is reduced by 1/2. Additionally, for every 5 ft. the target moves, it takes 1d6 damage.
+    <b>Crushed hand</b>. Quadruple damage, and the target loses use of one of its arms or hands.
+
+  pcMagical
+    <b>Magical barrage.</b> Maximum damage, and an additional target within range is affected at half potency, or the spell’s area of effect is increased by 5 ft.
+    <b>Spell storm.</b> Double damage.
+    <b>Impact.</b> Maximum damage.
+    <b>Spell drain.</b> Double damage, and the target must make a DC 12 saving throw using its spellcasting ability. On a failed save, the target is unable to cast spells on its next turn.
+    <b>Guiding attack.</b> Maximum damage, and the target has disadvantage on saving throws against your spells for 1d4 rounds.
+    <b>Bombardment.</b> Double damage.
+    <b>Precise magic.</b> Maximum damage.
+    <b>Terrifying display.</b> Double damage, and all enemies that can see you must make a DC 12 Wisdom saving throw. On a failed save, they are frightened of you until the end of your next turn.
+    <b>Surge of power.</b> Maximum damage, and you can immediately cast the same spell against the same target, expending a spell slot as normal.
+    <b>Blast of power.</b> Double damage.
+    <b>Targeted spell.</b> Maximum damage.
+    <b>Big boom.</b> Double damage. If this attack deals force or thunder damage: the target is pushed back 1d4 × 5 ft. if it is Large or smaller, taking 1d6 Bludgeoning damage for every 5 ft. traveled.
+    <b>Resistance is futile.</b> Maximum damage and, if the target is resistant to this damage type, it loses that resistance for 1 minute.
+    <b>Eruption.</b> Double damage.
+    <b>Onslaught.</b> Maximum damage.
+    <b>Didn’t want it anyway...</b> Double damage, and a non-Magical item the target is holding or wearing is also affected by the damage type of the spell.
+    <b>Magical barrage.</b> Maximum damage, and 2 additional targets within range are affected at half potency, or the spell’s area of effect is increased by 10 ft.
+    <b>Spell storm.</b> Triple damage.
+    <b>Impact.</b> Maximum damage, and roll the damage dice again.
+    <b>Spell drain.</b> Triple damage, and the target must make a DC 14 saving throw using its spellcasting ability. On a failed save, the target is unable to cast spells for 1d4 + 1 rounds.
+    <b>Guiding attack.</b> Maximum damage, and the target has disadvantage on saving throws against your spells for 2d4 rounds.
+    <b>Bombardment.</b> Triple damage.
+    <b>Precise magic.</b> Maximum damage, and roll the damage dice again.
+    <b>Terrifying display.</b> Triple damage, and all enemies that can see you must make a DC 14 Wisdom saving throw. On a failed save, they are frightened of you for 1d4 + 1 rounds.
+    <b>Surge of power.</b> Maximum damage, and you can immediately cast the same spell against any target within range, expending a spell slot as normal.
+    <b>Blast of power.</b> Triple damage.
+    <b>Targeted spell.</b> Maximum damage, and roll the damage dice again.
+    <b>Big boom.</b> Triple damage. If this attack deals force or thunder damage: the target is pushed back 2d4 × 5 ft. if it is Large or smaller, taking 1d6 Bludgeoning damage for every 5 ft. traveled.
+    <b>Resistance is futile.</b> Maximum damage and, if the target is resistant to this damage type, it loses that resistance for 1 minute. If the target isn’t resistant, it becomes vulnerable to this damage type for 1 minute.
+    <b>Eruption.</b> Triple damage.
+    <b>Didn’t want it anyway...</b> Triple damage, and two non-Magical items the target is holding or wearing are also affected by the damage type of the spell.
+    <b>Magical barrage.</b> Maximum damage, and 3 additional targets within range are affected at half potency, or the spell’s area of effect is increased by 15 ft.
+    <b>Spell storm.</b> Quadruple damage.
+    <b>Impact.</b> Maximum double damage.
+    <b>Spell drain.</b> Quadruple damage, and the target must make a DC 16 saving throw using its spellcasting ability. On a failed save, the target is unable to cast spells for 3d4 rounds.
+    <b>Guiding attack.</b> Maximum damage, and the target has disadvantage on saving throws against your spells for 3d4 rounds.
+    <b>Bombardment.</b> Quadruple damage.
+    <b>Precise magic.</b> Maximum double damage.
+    <b>Terrifying display.</b> Quadruple damage, and all enemies that can see you must make a DC 16 Wisdom saving throw. On a failed save, they are frightened of you for 2d4 + 2 rounds.
+    <b>Surge of power.</b> Maximum damage, and you can immediately cast the same spell against any target within range. This second attack does not expend a spell slot.
+    <b>Blast of power.</b> Quadruple damage.
+    <b>Targeted spell.</b> Maximum double damage.
+    <b>Big boom.</b> Quadruple damage. If this attack deals force or thunder damage: the target is pushed back 3d4 × 5 ft. if it is Large or smaller, taking 1d6 Bludgeoning damage for every 5 ft. traveled.
+    <b>Resistance is futile.</b> Maximum damage and the target becomes vulnerable to this damage type for 1 minute.
+    <b>Eruption.</b> Quadruple damage.
+    <b>Didn’t want it anyway...</b> Quadruple damage, and three items the target is holding or wearing are also affected by the damage type of the spell.
+    <b>Rejuvenation.</b> Quadruple damage, and you regain a spell slot. Roll a d6 to determine the level of the spell slot.
+    <b>Detonation.</b> Quadruple damage, and all creatures within 15 ft. of the target are also affected.
+    <b>Blink and you’ll miss it.</b> Quadruple damage, and the target must make a DC 18 Wisdom saving throw. On a failed save, the target is unable to see you for 1 minute.
+    <b>Terrifying display.</b> Quadruple damage, and all enemies that can see you must make a DC 18 Wisdom saving throw. On a failed save, they are frightened of you. An enemy can repeat this saving throw at the end of its turn to stop being frightened.
+  
+  pcPiercing
+    <b>Pierced ear.</b> Maximum damage.
+    <b>With a sharp stick.</b> Double damage, and the target must make a DC 12 Dexterity saving throw. On a failed save, the target loses an eye (GM decides which one).
+    <b>Right in the kisser.</b> Maximum damage, and the target cannot speak for 1d4 rounds.
+    <b>Neck wound.</b> Double damage.
+    <b>Between the shoulders.</b> Maximum damage.
+    <b>Press the advantage.</b> Double damage and, if this was a melee attack, you can make a DC 16 Strength (Athletics) check to increase this to triple damage.
+    <b>Follow-up.</b> Maximum damage, and you may make another attack with disadvantage against the same target.
+    <b>Poke in the belly.</b> Double damage.
+    <b>In the knee.</b> Maximum damage.
+    <b>Pinned.</b> Double damage, and the target is pinned to the ground and becomes restrained.
+    <b>Target practice.</b> Maximum damage, and any enemy of the target within range may make an attack of opportunity with disadvantage against it.
+    <b>Pierced thigh.</b> Double damage.
+    <b>Shoulder jab.</b> Maximum damage.
+    <b>Distracting jab.</b> Double damage, and the target must make a DC 12 Constitution saving throw. On a failed save, the target has disadvantage on their next attack.
+    <b>Find an opening.</b> Maximum damage, and you have advantage on your next attack against the target.
+    <b>Pierced hand.</b> Double damage.
+    <b>Pierced ear.</b> Maximum damage, and roll the damage dice again.
+    <b>With a sharp stick.</b> Triple damage, and the target must make a DC 14 Dexterity saving throw. On a failed save, the target loses an eye (GM decides which one).
+    <b>Right in the kisser.</b> Maximum damage, and the target cannot speak for 2d4 rounds.
+    <b>Neck wound.</b> Triple damage.
+    <b>Between the shoulders.</b> Maximum damage, and roll the damage dice again.
+    <b>Press the advantage.</b> Triple damage and, if this was a melee attack, you can make a DC 14 Strength (Athletics) check to increase this to quadruple damage.
+    <b>Follow-up.</b> Maximum damage, and you may make another attack against the same target.
+    <b>Poke in the belly.</b> Triple damage.
+    <b>In the knee.</b> Maximum damage, and roll the damage dice again.
+    <b>Pinned.</b> Triple damage, and the target is pinned to the ground and becomes restrained.
+    <b>Target practice.</b> Maximum damage, and any enemy of the target within range may make an attack of opportunity against it.
+    <b>Pierced thigh.</b> Triple damage.
+    <b>Shoulder jab.</b> Maximum damage, and roll the damage dice again.
+    <b>Distracting jab.</b> Triple damage, and the target must make a DC 14 Constitution saving throw. On a failed save, the target has disadvantage on attacks for 1d4 + 1 rounds.
+    <b>Find an opening.</b> Maximum damage, and you have advantage on attacks against the target for 1d4 + 1 rounds.
+    <b>Pierced ear.</b> Maximum double damage.
+    <b>With a sharp stick.</b> Quadruple damage, and the target must make a DC 16 Dexterity saving throw. On a failed save, the target loses an eye (GM decides which one).
+    <b>Right in the kisser.</b> Maximum damage, and the target cannot speak for 3d4 rounds.
+    <b>Neck wound.</b> Quadruple damage.
+    <b>Between the shoulders.</b> Maximum double damage.
+    <b>Press the advantage.</b> Quadruple damage and, if this was a melee attack, you can make a DC 16 Strength (Athletics) check to increase this to quintuple damage.
+    <b>Follow-up.</b> Maximum damage, and you may make another attack with advantage against the same target.
+    <b>Poke in the belly.</b> Quadruple damage.
+    <b>In the knee.</b> Maximum double damage.
+    <b>Pinned.</b> Quadruple damage, and the target is pinned to the ground and becomes restrained.
+    <b>Target practice.</b> Maximum damage, and any enemy of the target within range may make an attack of opportunity with advantage against it.
+    <b>Pierced thigh.</b> Quadruple damage.
+    <b>Shoulder jab.</b> Maximum double damage.
+    <b>Distracting jab.</b> Quadruple damage, and the target must make a DC 16 Constitution saving throw. On a failed save, the target has disadvantage on attacks for 2d4 + 2 rounds.
+    <b>Find an opening.</b> Maximum damage, and you have advantage on attacks against the target for 2d4 + 2 rounds.
+    <b>Pressure point.</b> Quadruple damage, and the target must make a DC 18 Constitution saving throw. On a failed save, the target is paralyzed.
+    <b>Shot through the heart.</b> Quadruple damage, and the target loses 1/4 of their maximum hit points at the beginning of their turn for 3 rounds.
+    <b>Chink in the armor.</b> Quadruple damage, and the target becomes vulnerable to piercing damage for 1 minute.
+    <b>Distracting jab.</b> Quadruple damage, and the target has disadvantage on attacks until the end of the encounter.
+
+  pcSlashing
+    <b>Brow slash.</b> Double damage, and the target is blinded until the end of its next turn.
+    <b>Terrifying slash.</b> Maximum damage, and the target must make a DC 12 Wisdom saving throw. On a failed save, the target is frightened of you until the end of its next turn.
+    <b>Slice to the cheek.</b> Double damage.
+    <b>Bloodied nose.</b> Maximum damage.
+    <b>Vexing cut.</b> Double damage, and the target must make a DC 12 Constitution saving throw. On a failed save, the target cannot take reactions until the end of your next turn.
+    <b>Follow-up.</b> Maximum damage, and you may make another attack against the same target.
+    <b>Nave to chops.</b> Double damage.
+    <b>Slash to the ribs.</b> Maximum damage.
+    <b>Sliced tendon.</b> Double damage, and the target’s speed is reduced by 1/2 until the end of the target’s next turn.
+    <b>Sweep the legs.</b> Maximum damage, and the target must make a DC 12 Dexterity saving throw. On a failed save, the target is knocked prone.
+    <b>Calf slash.</b> Double damage.
+    <b>Low slash.</b> Maximum damage.
+    <b>Slow recovery.</b> Double damage, and the target must make a DC 12 Constitution saving throw. On a failed save, the target can make one less attack on their next turn.
+    <b>You get what you pay for.</b> Maximum damage, and you and the target must make a contested Strength check. If the target loses, their weapon is partially broken and deals 1/2 damage until it is repaired.
+    <b>Forearm blow.</b> Double damage.
+    <b>Slashed shoulder.</b> Maximum damage.
+    <b>Brow slash.</b> Triple damage, and the target is blinded for 1d4 + 1 rounds.
+    <b>Terrifying slash.</b> Maximum damage, and the target must make a DC 14 Wisdom saving throw. On a failed save, the target is frightened of you for 2d4 rounds.
+    <b>Slice to the cheek.</b> Triple damage.
+    <b>Bloodied nose.</b> Maximum damage, and roll the damage dice again.
+    <b>Vexing cut.</b> Triple damage, and the target must make a DC 14 Constitution saving throw. On a failed save, the target cannot take reactions for 2d4 rounds.
+    <b>Follow-up.</b> Maximum damage, and you may make another attack with advantage against the same target.
+    <b>Nave to chops.</b> Triple damage.
+    <b>Slash to the ribs.</b> Maximum damage, and roll the damage dice again.
+    <b>Sliced tendon.</b> Triple damage, and the target’s speed is reduced to 5 ft. until the end of the target’s next turn.
+    <b>Sweep the legs.</b> Maximum damage, and the target must make a DC 14 Dexterity saving throw. On a failed save, the target is knocked prone.
+    <b>Calf slash.</b> Triple damage.
+    <b>Low slash.</b> Maximum damage, and roll the damage dice again.
+    <b>Slow recovery.</b> Triple damage, and the target must make a DC 14 Constitution saving throw. On a failed save, the target can make two fewer attacks on their next turn.
+    <b>You get what you pay for.</b> Maximum damage, and you and the target must make a contested Strength check. If the target loses, their weapon is partially broken and deals 1/4 damage until it is repaired.
+    <b>Slashed shoulder.</b> Maximum damage, and roll the damage dice again.
+    <b>Brow slash.</b> Quadruple damage, and the target is blinded for 3d4 + 2 rounds.
+    <b>Terrifying slash.</b> Maximum damage, and the target must make a DC 16 Wisdom saving throw. On a failed save, the target is frightened of you for 3d4 rounds.
+    <b>Slice to the cheek.</b> Quadruple damage.
+    <b>Bloodied nose.</b> Maximum double damage.
+    <b>Vexing cut.</b> Quadruple damage, and the target must make a DC 16 Constitution saving throw. On a failed save, the target cannot take reactions for 3d4 rounds.
+    <b>Follow-up.</b> Maximum damage, and you may make another attack.
+    <b>Nave to chops.</b> Quadruple damage.
+    <b>Slash to the ribs.</b> Maximum double damage.
+    <b>Sliced tendon.</b> Quadruple damage, and the target’s speed is reduced to 0 ft. until the end of the target’s next turn.
+    <b>Sweep the legs.</b> Maximum damage, and the target must make a DC 16 Dexterity saving throw. On a failed save, the target is knocked prone.
+    <b>Calf slash.</b> Quadruple damage.
+    <b>Low slash.</b> Maximum double damage.
+    <b>Slow recovery.</b> Quadruple damage, and the target must make a DC 16 Constitution saving throw. On a failed save, the target can make three fewer attacks on their next turn.
+    <b>You get what you pay for.</b> Maximum damage, and you and the target must make a contested Strength check. If the target loses, their weapon is broken.
+    <b>Forearm blow.</b> Quadruple damage.
+    <b>Don’t lose your head!</b> Quadruple damage and, if the damage the target takes is equal to or greater than 1/2 of their maximum hit points, they are decapitated.
+    <b>Gutted.</b> Quadruple damage and, if the damage the target takes is equal to or greater than 1/2 of their maximum hit points, they are disemboweled.
+    <b>I never touched a drop!</b> Quadruple damage and, if the damage the target takes is equal to or greater than 1/4 of their maximum hit points, they lose a leg.
+    <b>Disarmed.</b> Quadruple damage and, if the damage the target takes is equal to or greater than 1/2 of their maximum hit points, they lose an arm/hand.
+
+enemyDamage
+  
+  eBludgeoning
+    <b>Stunning blow.</b> Make a DC 12 Constitution saving throw. On a failed save, you are stunned until the end of your next turn.
+    <b>Right in the kisser.</b> Double damage, and you can’t speak properly for 1d4 rounds. Spells with a verbal component have a 50% chance of failing.
+    <b>Bell-ringer.</b> You are deafened until the end of your next turn.
+    <b>Blunt force amnesia.</b> You forget the past 1d12 hours.
+    <b>Winded.</b> You suffer one level of exhaustion.
+    <b>Knocked off balance.</b> Double damage, and lose 1 attack on your next turn.
+    <b>Gut punch.</b> You cannot take any bonus actions for 1d4 rounds.
+    <b>Plain and simple.</b> This attack deals maximum damage.
+    <b>You’re not going anywhere.</b> You cannot take the Disengage action for 1d4 rounds.
+    <b>Get down!</b> Double damage, and if the resulting damage is equal to or greater than 1/2 of your maximum hit points: you are knocked prone.
+    <b>Crushing blow.</b> Make a DC 12 Dexterity saving throw. On a failed save, if you’re wearing plate armor: its effectiveness is reduced by 1.
+    <b>...And stay down.</b> You are pushed back 5 ft. and must make a DC 12 Dexterity saving throw. On a failed save, you are knocked prone and take 1d4 damage.
+    <b>Knocked off balance.</b> An adjacent enemy can make an attack of opportunity against you.
+    <b>Staggered.</b> Double damage, and all attacks against you have advantage until the start of your next turn.
+    <b>Softening blow.</b> You are vulnerable to Bludgeoning damage for 1d4 rounds.
+    <b>Dominoes.</b> You and another creature within 5 ft. of you and your attacker must make opposed Strength (Athletics) checks. The loser is knocked prone.
+    <b>Hit the dirt.</b> You are knocked prone.
+    <b>Kneecapped.</b> Double damage, and you have disadvantage on skill checks that rely on your legs until you finish a short rest.
+    <b>This little piggy.</b> Your speed is reduced by 1/2 for 1d4 rounds.
+    <b>Right on the shins.</b> You cannot take the Dash action for 1d4 rounds.
+    <b>Crushed hand.</b> You have disadvantage on skill checks that rely on your hands or arms until you finish a short rest.
+    <b>Rap on the knuckles.</b> Double damage, and you have disadvantage on Dexterity based attacks for 1d4 rounds.
+    <b>Drop it!</b> Drop what you’re holding (the GM decides which hand, or determines randomly).
+    <b>That’ll buff out.</b> If you are holding a shield: its effectiveness is reduced by 1.
+    <b>Stunning blow.</b> Make a DC 12 Constitution saving throw. On a failed save, you are stunned until the end of your next turn.
+    <b>Lle quena i’lambe tel’ Eldalie?</b> Triple damage, and make a DC 14 Constitution saving throw. On a failed save, lose one of your known languages at random.
+    <b>Bonk on the noggin.</b> Make a DC 14 Constitution saving throw. On a failed save, permanently lose 1 point from your Intelligence ability.
+    <b>How’d I get here?</b> You forget the last 1d12 days.
+    <b>...And stay down.</b> You are pushed back 10 ft. Make a DC 14 Dexterity saving throw. On a failed save, you are knocked prone and take 1d6 damage.
+    <b>Strike!</b> Triple damage, and you are knocked into another creature within 5 ft. of you. Both of you must make a DC 14 Dexterity saving throw. On a failed save, take 1d6 Bludgeoning damage.
+    <b>Crushing blow.</b> Make a DC 14 Dexterity saving throw. On a failed save, if you’re wearing plate armor: its effectiveness is reduced by 2.
+    <b>Staggered.</b> Double damage, and all attacks against you have advantage for 1d6 rounds.
+    <b>Right on the shins.</b> You cannot take the Dash action for 1d6 rounds.
+    <b>Hobbled.</b> Your speed is reduced to 10 ft. for 1d6 rounds.
+    <b>Staggered.</b> All attacks against you have advantage for 1d6 rounds.
+    <b>Crushed hand.</b> You have disadvantage on skill checks that rely on your hands or arms until you finish a long rest.
+    <b>Drop it!</b> Drop what you’re holding (the GM decides which hand, or determines randomly).
+    <b>That’ll buff out...</b> If you are holding a shield: its effectiveness is reduced by 2.
+    <b>Stunning blow.</b> Make a DC 16 Constitution saving throw. On a failed save, you are stunned until the end of your next turn.
+    <b>Out for the count.</b> Quadruple damage, and make DC 16 Constitution saving throw. On a failed save, you are knocked unconscious.
+    <b>...And stay down.</b> You are pushed back 15 ft. Make a DC 16 Dexterity saving throw. On a failed save, you are knocked prone and take 1d6 damage.
+    <b>Staggered.</b> Quadruple damage, and all attacks against you have advantage for 1d8 rounds.
+    <b>This little piggy.</b> Your speed is reduced by 1/2 until you finish a short rest.
+    <b>Kneecapped.</b> Quadruple damage, and you have disadvantage on skill checks that rely on your legs until you finish a long rest.
+    <b>Mangler.</b> Make a DC 16 Constitution saving throw. On a failed save, your Dexterity score is permanently reduced by 1.
+    <b>Bad break.</b> Quadruple damage, and you are unable to use your arm for 1d6+6 weeks (GM decides which arm, or determines randomly).
+    <b>Who am I?!</b> Make a DC 18 Constitution saving throw. On a failed save, you forget who you are and everything about yourself. You lose all of the benefits of your class including abilities and spells.
+    <b>Goodnight!</b> Quadruple damage, and you are knocked unconscious.
+    <b>Wide open.</b> All enemies within range may make an attack of opportunity against you.
+    <b>Smashed hand.</b> Make a DC 18 Strength saving throw. On a failed save, you are permanently unable to grasp with one of your hands (the GM decides which hand, or determines randomly).
+
+  eMagical
+    <b>Say what?</b> You are deafened for 1 minute.
+    <b>Jumbled memories.</b> Your Intelligence modifier is reduced by 1 until you finish a long rest.
+    <b>Distracting visions.</b> Your Wisdom modifier is reduced by 1 until you finish a long rest.
+    <b>Terrifying display.</b> Double damage, and make a DC 12 Wisdom saving throw. On a failed save, you become frightened of your attacker.
+    <b>Wrath of the elements.</b> If this attack deals acid, cold, fire, lighting, or poison damage: it deals double damage. Other damage types deal normal damage.
+    <b>Leech life.</b> Your Constitution modifier is reduced by 1 until you finish a long rest.
+    <b>Wrath of the mage.</b> If this attack deals force, necrotic, psychic, radiant, or thunder damage: it deals double damage. Other damage types deal normal damage.
+    <b>Life drinker.</b> Double damage, and if this attack deals acid, poison, or necrotic damage: your Constitution modifier is reduced by 2 until you finish a long rest.
+    <b>Life drinker.</b> If this attack deals acid, poison, or necrotic damage: your Constitution modifier is reduced by 2 until you finish a long rest.
+    <b>Magical barrage.</b> An additional target within range is affected at 1/2 potency, or the spell’s area of effect is increased by 5 ft.
+    <b>Lingering energy.</b> Make a DC 12 Constitution saving throw. On a failed save, take 1d4 damage (of the same type as dealt by this attack) at the beginning of your turn for the next 1d4 rounds.
+    <b>Boom.</b> Double damage, and if this attack deals force or thunder damage: you are pushed back 1d4 × 5 ft.
+    <b>Lingering weakness.</b> You are vulnerable to the damage type taken from this attack for 1d4 rounds.
+    <b>Spirit drain.</b> The hit points lost from this attack can’t be healed except by magic.
+    <b>Lingering energy.</b> Maximum damage, and you take 1d4 damage (of the same type as dealt by this attack) at the beginning of your turn for the next 1d4 rounds.
+    <b>Dispersal.</b> Double damage, and the spell deals normal damage to a target within 5 ft. of you.
+    <b>Crackling energy.</b> Your Dexterity modifier is reduced by 1 until you finish a long rest.
+    <b>Sap strength.</b> If this attack deals acid, poison, or necrotic damage: your Strength modifier is reduced by 2 until you finish a long rest.
+    <b>Erode.</b> Your AC is reduced by 1d4 for 1d4 rounds.
+    <b>Ka-boom!</b> Double damage, and if this attack deals force or thunder damage: you are knocked prone.
+    <b>Crackling energy.</b> Your Dexterity modifier is reduced by 1 until you finish a short rest.
+    <b>I feel it in my fingers...</b> If this attack deals acid, poison, or necrotic damage: your Dexterity modifier is reduced by 2 until you finish a long rest.
+    <b>Brain fog.</b> You cannot take reactions for 1d4 rounds.
+    <b>Whispers of doom.</b> Double damage, and you take a 1d4 penalty to your attack rolls for 1d4 rounds.
+    <b>Say what?</b> You are deafened until you take a short rest.
+    <b>Cor blimey guv’nor.</b> You develop an accent completely different to the one you had before.
+    <b>QUIET!</b> Until 2d12 days have passed, any time you attempt to speak, you shout at full volume.
+    <b>You are feeling sleepy...</b> Triple damage, and if this attack deals psychic damage: you are knocked unconscious.
+    <b>Magical barrage.</b> An additional target within range is affected, or the spell’s area of effect is increased by 10 ft.
+    <b>Lingering energy.</b> Make a DC 14 Constitution saving throw. On a failed save, take 1d4 damage (of the same type as dealt by this attack) at the beginning of your turn for the next 1d6 rounds.
+    <b>Spirit drain.</b> Double damage, and the hit points lost from this attack can’t be healed except by magic.
+    <b>Crucible.</b> Triple damage and roll a d6. 1-3, you are vulnerable to this damage type for 1 minute, 4 no effect, 5-6 you resistant to this damage type for 1 minute.
+    <b>Erode.</b> Your AC is reduced by 1d6 for 1d6 rounds.
+    <b>Paralysis.</b> Make a DC 14 Dexterity saving throw. On a failed save, you are paralyzed for 1d6 rounds.
+    <b>Boom.</b> Triple damage, and if this attack deals force or thunder damage: you are pushed back 2d4 × 5 ft.
+    <b>Crackling energy.</b> Your Dexterity modifier is reduced by 2 until you finish a short rest.
+    <b>Brain fog.</b> You cannot take reactions for 1d6 rounds.
+    <b>Whispers of doom.</b> Double damage, and you take a 1d6 penalty to your attack rolls for 1d6 rounds.
+    <b>...</b> Until 2d12 days have passed, you are unable to speak.
+    <b>We’re all mad here...</b> Quadruple damage, and if this attack deals psychic damage: you develop a form of short-term madness (see Game Master’s Guide).
+    <b>Magical barrage.</b> Two additional targets within range are affected, or the spell’s area of effect is increased by 15 ft.
+    <b>Lingering energy.</b> Quadruple damage, and make a DC 16 Constitution saving throw. On a failed save, take 1d8 damage (of the same type as dealt by this attack) at the beginning of your turn for the next 1d8 rounds.
+    <b>Spirit drain.</b> Triple damage, and the hit points lost from this attack can’t be healed except by magic.
+    <b>Big boom.</b> Quadruple damage, and if this attack deals force or thunder damage: you are knocked back 1d8 × 5 ft., taking 1d6 Bludgeoning damage for each 5 ft. traveled, and you are knocked prone.
+    <b>Lingering energy.</b> Make a DC 16 Constitution saving throw. On a failed save, take 1d8 damage (of the same type as dealt by this attack) at the beginning of your turn for the next 1d8 rounds.
+    <b>Sap strength.</b> Quadruple damage, and if this attack deals acid, poison, or necrotic damage: your Strength score is permanently reduced by 1.
+    <b>Mind wipe.</b> Make a DC 18 Wisdom saving throw. On a failed save, roll a d6, and you are permanently unable to see or hear: 1-2 Dwarves, 3-4 Elves or 5-6 Halflings.
+    <b>Magical barrage.</b> This attack deals maximum damage, and an additional target within range is affected, or the spell’s area of effect is increased by 15 ft.
+    <b>Epicenter.</b> All creatures within 15 ft. of you are affected by the spell, or are affected again in the case of area affect spells.
+    <b>Midas touch.</b> Quadruple damage, and your hands are permanently imbued with Magical energy. Every non-living thing you touch is affected as if by the damage type taken.
+  
+  ePiercing
+    <b>All fun and games...</b> Roll a d100. On a 2 or less, you are blinded in one eye.
+    <b>Extreme ear piercing.</b> Make a DC 12 Constitution saving throw. On a failed save, a large section of one of your ears is severed.
+    <b>Not the face!</b> You receive a permanent scar on your face.
+    <b>Skewered.</b> You take 1d4 damage at the start of your turn for 1d4 rounds.
+    <b>Deep wound.</b> Make a DC 12 Constitution saving throw. On a failed save, take an additional 1d4 Piercing damage.
+    <b>Find the joints.</b> This attack deals maximum damage. Make a DC 12 Constitution saving throw. On a failed save, you lose your next attack action.
+    <b>Skewered.</b> You take 1d4 damage at the beginning of your turn for the next 1d4 turns.
+    <b>Target practice.</b> Double damage, and 1 opponent within 60 ft. may make an attack of opportunity against you.
+    <b>Muscle piercer.</b> Your next attack using a melee weapon deals 1d4 less damage.
+    <b>Open target.</b> One enemy within 5 ft. of you may make an attack of opportunity against you.
+    <b>Distracting strike.</b> Double damage, and you cannot take reactions or bonus actions until the end of your next turn.
+    <b>Armor Piercing strike.</b> Make a DC 12 Dexterity saving throw. On a failed save, if you’re wearing chain or ring armor: its effectiveness is reduced by 1.
+    <b>Internal bleeding.</b> Make a DC 12 Constitution saving throw. On a failed save, take 1d4 damage at the beginning of your turn for the next 1d4 rounds.
+    <b>You missed a spot.</b> You are vulnerable to Piercing damage for 1d4 rounds.
+    <b>Flurry.</b> Double damage, and your attacker may make another attack against you with disadvantage.
+    <b>Stabbing pains.</b> You deal minimum damage on all attacks for 1d4 rounds.
+    <b>Pinned.</b> The attack pins your foot to the ground. Make a DC 12 Strength check to free yourself, taking an additional 1d4 damage with each failed attempt.
+    <b>Whose heel?</b> For the next 1d4 rounds you must make a DC 12 Constitution saving throw when attempting to move 5 ft. or more. On a failed save, you fall prone.
+    <b>A shot in the arm.</b> Double damage, and you have disadvantage on Strength based attacks for 1d4 rounds.
+    <b>The thighs have it.</b> Your speed is reduced by 5 ft. until you finish a short rest.
+    <b>Pinned.</b> The attack pins your arm to a wall, another target, or your own body. Make a DC 12 Strength check to free your arm, taking 1d4 damage with each failed attempt.
+    <b>Drop it!</b> Drop what you’re holding (the GM decides which hand, or determines randomly).
+    <b>Palm piercer.</b> Double damage, and you are unable to cast spells with a somatic component for 1d4 rounds.
+    <b>Funny bone.</b> You have disadvantage on Dexterity based attacks for 1d4 rounds.
+    <b>All fun and games...</b> Roll a d100. On a 5 or less, you are blinded in one eye.
+    <b>Split lip.</b> Spells with a verbal component have a 50% chance of failing until you are healed.
+    <b>Staunch the bleeding.</b> Triple damage, and you have disadvantage on Strength, Dexterity, and Constitution based rolls for 1d6 rounds.
+    <b>Internal bleeding.</b> Make a DC 14 Constitution saving throw. On a failed save, take 1d6 damage at the beginning of your turn for the next 1d6 rounds.
+    <b>Deep wound.</b> Make a DC 14 Constitution saving throw. On a failed save, take an additional 1d6 Piercing damage.
+    <b>Internal bleeding.</b> You take 1d6 damage at the beginning of your turn for the next 1d6 turns.
+    <b>Shish kebab.</b> Triple damage, and if this was a melee attack: the weapon is lodged in your body.
+    <b>Armor Piercing strike.</b> Make a DC 14 Dexterity saving throw. On a failed save, if you’re wearing chain or ring armor: its effectiveness is reduced by 2.
+    <b>Pinned.</b> The attack pins your foot to the ground. Make a DC 14 Strength check to free yourself, taking an additional 1d6 damage with each failed attempt.
+    <b>Something slipped.</b> Triple damage, and your AC is reduced by 1d6 for 1d6 rounds.
+    <b>Whose heel?</b> For the next 1d6 rounds you must make a DC 14 Constitution saving throw when attempting to move 5 ft. or more. On a failed save, you fall prone.
+    <b>Pinned.</b> The attack pins your arm to a wall, another target, or your own body. Make a DC 14 Strength check to free your arm, taking 1d6 damage with each failed attempt.
+    <b>Palm piercer.</b> Triple damage, and you are unable to cast spells with a somatic component for 1d6 rounds.
+    <b>Funny bone.</b> You have disadvantage on Dexterity-based attacks for 1d6 rounds.
+    <b>Split lip.</b> Quadruple damage, and spells with a verbal component have a 75% chance of failing until you are healed.
+    <b>Feeling faint...</b> You have disadvantage on Strength, Dexterity, and Constitution based rolls for 1d8 rounds. Additionally, you must make a DC 16 Constitution saving throw at the beginning of each of your turns. On a failed save, you fall prone.
+    <b>Skewered.</b> Quadruple damage, and you take 1d8 damage at the beginning of your turn for the next 1d8 turns.
+    <b>Internal bleeding.</b> Make a DC 16 Constitution saving throw. On a failed save, take an additional 1d8 Piercing damage at the beginning of your turn for the next 1d8 rounds.
+    <b>Something slipped.</b> Quadruple damage, and your AC is reduced by 1d8 for 1d8 rounds.
+    <b>Pinned.</b> The attack pins your foot to the ground. Make a DC 16 Strength check to free yourself, taking an additional 1d8 damage with each failed attempt.
+    <b>Palm piercer.</b> Quadruple damage, and you are unable to cast spells that rely on somatic elements or hold anything in one of your hands (GM decides which hand, or determines randomly) until you finish a short rest.
+    <b>Pinned.</b> The attack pins your arm to a wall, another target, or your own body. Make a DC 16 Strength check to free your arm, taking 1d8 damage with each failed attempt.
+    <b>Feeling faint...</b> You have disadvantage on Strength, Dexterity, and Constitution based rolls for 1d10 rounds. Additionally, you must make a DC 18 Constitution saving throw at the beginning of each of your turns. On a failed save, you fall prone.
+    <b>Shot through the heart.</b> Make a DC 18 Constitution saving throw. On a failed save, lose 1/4 of your maximum hit points at the end of your turn for 3 rounds.
+    <b>Damn this leg!</b> Permanently, when entering combat, make a DC 12 Constitution saving throw. On a failed save, you have disadvantage on Strength and Dexterity based attacks for 1d4 rounds.
+    <b>Something slipped.</b> Quadruple damage, and your AC is reduced by 1d10 for 1d10 rounds.
+
+  eSlashing
+    <b>Wanna know how I got these?</b> Double damage, and you receive a permanent scar on your face.
+    <b>Bleeder.</b> Make a DC 12 Constitution saving throw. On a failed save, you take 1d4 damage at the start of your turn for 1d4 rounds.
+    <b>Blood in the eyes.</b> You are blinded until the end of your next turn.
+    <b>Split lip.</b> Make a DC 12 Constitution saving throw. On a failed save, you are unable to speak properly. Spells with a verbal component have a 25% chance of failing.
+    <b>That’s a lot of blood...</b> Double damage. If the damage is equal to or greater than 1/4 of your maximum hit points: make a DC 12 Wisdom saving throw. On a failed save, you become frightened of your attacker.
+    <b>Bleeder.</b> Make a DC 12 Constitution saving throw. On a failed save, you take 1d4 damage at the start of your turn for 1d4 rounds.
+    <b>Set up.</b> One enemy within 5 ft. of you may make an attack of opportunity against you.
+    <b>Brutal slash.</b> Attacker rerolls any damage dice with a face value of 1 or 2 for this attack.
+    <b>Enraging attack.</b> Double damage, and you may make an attack of opportunity against your attacker.
+    <b>Rend armor.</b> Make a DC 12 Dexterity saving throw. On a failed save, if you’re wearing leather or cloth armor: its effectiveness is reduced by 1.
+    <b>Something slipped.</b> Your AC is reduced by 1d4 for 1d4 rounds.
+    <b>Plain and simple.</b> This attack deals maximum damage.
+    <b>Terrifying slash.</b> Double damage, and make a DC 12 Wisdom saving throw. On a failed save, you become frightened of your attacker.
+    <b>Opened defenses.</b> The next attack made against you has advantage.
+    <b>Wild swing.</b> Any creature within 5 ft. of you and your attacker takes 1/2 the damage you took.
+    <b>This is going to hurt.</b> You are vulnerable to Slashing damage for 1d4 rounds.
+    <b>Bleeder.</b> Make a DC 12 Constitution saving throw. On a failed save, you take 1d4 damage at the start of your turn for 1d4 rounds.
+    <b>Sliced tendon.</b> Your speed is reduced by 1/2 for 1d4 rounds.
+    <b>Sweep the legs.</b> Make a DC 12 Dexterity saving throw. On a failed save, you are knocked prone.
+    <b>Off form.</b> You have disadvantage on your next melee attack.
+    <b>Disarmed.</b> Double damage, and make a DC 12 Dexterity saving throw. On a failed save, drop your weapon.
+    <b>Weakening slash.</b> You deal 1/2 damage on your next melee attack.
+    <b>Off form.</b> You have disadvantage on your next melee attack.
+    <b>Follow-up.</b> Your attacker may make 1 additional attack against you.
+    <b>You got off lightly. More or less.</b> Triple damage, that’s all... We hope you don’t die...
+    <b>Bleeder.</b> Make a DC 14 Constitution saving throw. On a failed save, take 1d6 damage at the beginning of your turn for the next 1d6 rounds.
+    <b>Not them!</b> Make a DC 14 Wisdom saving throw. On a failed save, you become frightened of creatures of your attacker’s type. Repeat this save each time you face creatures of this type until you have defeated 2d12 of them.
+    <b>Ragged scar.</b> You receive a permanent scar on your face, and you gain proficiency in Charisma (Intimidation), but lose proficiency in Charisma (Persuasion), if you had it.
+    <b>Make them pay.</b> Triple damage, and you have advantage on your next attack against the attacker.
+    <b>Rend armor.</b> Make a DC 14 Dexterity saving throw. On a failed save, if you’re wearing leather armor: its effectiveness is reduced by 2.
+    <b>Something slipped.</b> Your AC is reduced by 1d6 for 1d6 rounds.
+    <b>Wild swing.</b> Any creature within 5 ft. of you and your attacker takes the same damage you took.
+    <b>Slashed ankles.</b> Triple damage, and you are knocked prone. Make a DC 14 Constitution saving throw when attempting to get back up. On a failed save, you are unable to do so.
+    <b>Off form.</b> You have disadvantage on melee attacks for 1d6 rounds.
+    <b>Sliced tendon.</b> Your speed is reduced by 1/2 for 1d6 rounds.
+    <b>Disarmed.</b> Triple damage, and make a DC 14 Dexterity saving throw. On a failed save, drop your weapon.
+    <b>Off form.</b> You have disadvantage on melee attacks for the next 1d6 rounds.
+    <b>Follow-up.</b> Your attacker may make 1 additional attack against you.
+    <b>Not them!</b> Quadruple damage, and make a DC 16 Wisdom saving throw. On a failed save, you become frightened of creatures of your attacker’s type. Repeat this save each time you face creatures of this type until you have defeated 3d12 of them.
+    <b>Hideous scar.</b> You receive a permanent scar on your face, giving you advantage on Charisma (Intimidation) checks, and disadvantage on Charisma (Persuasion) checks.
+    <b>Something slipped.</b> Quadruple damage, and your AC is reduced by 1d8 for 1d8 rounds.
+    <b>Really took it out of you.</b> The hit points lost from this attack cannot be recovered until you finish a long rest.
+    <b>Off form.</b> Quadruple damage, and you have disadvantage on melee attacks for the next 1d8 rounds.
+    <b>Open wound.</b> For the next 1d8 rounds, you must make a DC 16 Constitution saving throw when attempting to move 5 ft. or more. On a failed save, you take 1d8 damage.
+    <b>Off form.</b> Quadruple damage, and you have disadvantage on melee attacks for the next 1d8 rounds.
+    <b>Weakening slash.</b> You deal 1/2 damage on melee attacks for the next 1d8 rounds.
+    <b>Don’t lose your head!</b> Quadruple damage, and if the damage you take is equal to or greater than 1/2 of your maximum hit points: you are decapitated.
+    <b>Heroic end.</b> Maximum quadruple damage. If this attack kills you: all allies who can see you have advantage on their attacks for 1d10 rounds.
+    <b>Nicked artery</b> Make a DC 18 Constitution saving throw. On a failed save, take 1d10 damage at the start of your turn for 1d10 rounds. If maximum damage is rolled: this effect continues for an additional 1d8 rounds (then 1d6, etc.)
+    <b>Disarmed.</b> Make a DC 18 Dexterity saving throw. On a successful save, drop what you’re holding (the GM decides which hand, or determines randomly). On a failed save, take quadruple damage and lose the hand.

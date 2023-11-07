@@ -1,0 +1,39 @@
+<!---->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
+<link rel="stylesheet" type="text/css" href="https://otk102.github.io/PerchanceCSS/merchants.css">
+<script>document.body.style.backgroundColor = options.backgroundColor;</script>
+<!---->
+
+<!---->
+<div class="container">
+  <img id="image" src="[options.iconSRC]" width="[options.iconSize]"></img>
+</div>
+<!---->
+
+<!---->
+<div>
+  
+    <h3>Attacker</h3>
+    <select oninput="charSelect = this.value, update(charSelect)">
+        <option value="pc">PC</option>
+        <option value="enemy">Enemy</option>
+    </select>
+
+  
+  
+    <h3>Enemy</h3>
+    <select oninput="eSelect = this.value, update(eSelect)">
+        <option value="eBludgeoning">Bludgeoning</option>
+        <option value="eMagical">Magical</option>
+        <option value="ePiercing">Piercing</option>
+        <option value="eSlashing">Slashing</option>
+    </select>
+  
+    <br><br>
+  
+    <button class="button">CRIT HIT!!!</button>
+  
+</div>
+<!---->
+
+<br>
