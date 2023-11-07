@@ -75,10 +75,6 @@
   height: 100%; 
 }
 
-a {
-  font-weight: bold;
-}
-
 h1 {
   font-family: [fontHeader];
   color: white;
@@ -88,4 +84,8 @@ h1 {
 
 img {
   margin: 16px;
+}
+
+label {
+  font-weight: bold;
 }
