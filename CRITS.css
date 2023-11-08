@@ -37,8 +37,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
-  width: 400px;
+  height: 200px;
+  width: 200px;
 }
 
 .case > div {
@@ -92,7 +92,7 @@
 }
 
 a {
-  float:right;
+  float: right;
 }
 
 h1 {
@@ -107,6 +107,8 @@ img {
 }
 
 label {
+  color: DarkSlateGrey;
   font-weight: bold;
-  float:left;
+  float: left;
+  padding-right: 12px;
 }
