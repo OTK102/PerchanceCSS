@@ -67,14 +67,14 @@
 
 .drop {
   background-color: DarkSlateGrey;
-  width: 100px;
+  width: auto;
 }
 
 .font {
   color: AliceBlue;
   font-family: 'Dosis';
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   line-height: 150%;
   letter-spacing: 2px;
   text-transform: uppercase;
