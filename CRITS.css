@@ -34,16 +34,6 @@
   color: #fff;
 }
 
-.case {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  width: 300px;
-  margin-bottom: 20px;
-  margin-top: 10px;
-}
-
 .center {
   display: flex;
   justify-content: center;
@@ -82,21 +72,26 @@
   text-transform: uppercase;
 }
 
+.row {
+  margin-top: 10px;
+}
+  
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin-bottom: 20px;
+}
+
 .wrapper {
   width: 100%;
   height: 100%; 
 }
 
-a.font {
+a {
   color: AliceBlue;
-  font-family: 'Dosis';
-  text-align: center;
-  font-size: 1.2rem;
-  line-height: 150%;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-style: italic;
   float: right;
+  text-transform: uppercase;
 }
 
 img {
@@ -105,7 +100,18 @@ img {
 
 label {
   color: DarkSlateGrey;
+  font-family: 'Dosis';
+  font-size: 1.2rem;
   font-weight: bold;
   float: left;
+  line-height: 150%;
+  letter-spacing: 2px;
   padding-right: 12px;
+  text-transform: uppercase;
+}
+
+select.drop {
+  background-color: DarkSlateGrey;
+  font-family: 'Dosis';
+  width: auto;
 }
