@@ -33,6 +33,18 @@
   color: #fff;
 }
 
+.case {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 400px;
+}
+
+.case > div {
+
+}
+  
 .center {
   display: flex;
   justify-content: center;
@@ -79,6 +91,10 @@
   height: 100%; 
 }
 
+a {
+  float:right;
+}
+
 h1 {
   font-family: 'Permanent Marker';
   color: DarkSlateGrey;
@@ -92,4 +108,5 @@ img {
 
 label {
   font-weight: bold;
+  float:left;
 }
