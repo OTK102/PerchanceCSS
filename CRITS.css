@@ -55,7 +55,7 @@
   align-items: center;
   justify-content:center;
   text-align: center; 
-  width: auto;
+  width: 500px;
 }
 
 .row {
@@ -67,6 +67,10 @@
   display: table;
   clear: both;
   margin-bottom: 20px;
+}
+
+.row > div {
+  text-align: justify;
 }
 
 .wrapper {
