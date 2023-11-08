@@ -56,12 +56,12 @@
 }
 
 .drop {
-  background-color: SlateGrey;
+  background-color: DarkSlateGrey;
   width: 100px;
 }
 
 .font {
-  color: #fff;
+  color: AliceBlue;
   font-family: 'Dosis';
   text-align: center;
   font-size: 0.8rem;
@@ -81,7 +81,7 @@
 
 h1 {
   font-family: 'Permanent Marker';
-  color: white;
+  color: DarkSlateGrey;
   text-transform: uppercase;
   font-size: 1.6rem;
 }
