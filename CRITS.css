@@ -12,8 +12,9 @@
   transition: .3s linear, color 0s, background-color 0s;
   outline: var(--b) solid #0000;
   outline-offset: .6em;
-  font-family: 'Shadows Into Light';
+  font-family: 'Papyrus';
   font-size: 16px;
+  font-weight: bold;
 
   border: 0;
 
@@ -57,21 +58,6 @@
   width: auto;
 }
 
-.drop {
-  background-color: DarkSlateGrey;
-  width: auto;
-}
-
-.font {
-  color: AliceBlue;
-  font-family: 'Dosis';
-  text-align: center;
-  font-size: 1.2rem;
-  line-height: 150%;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
 .row {
   margin-top: 10px;
 }
@@ -91,7 +77,6 @@
 a {
   color: AliceBlue;
   float: right;
-  text-transform: uppercase;
 }
 
 img {
@@ -106,12 +91,17 @@ label {
   float: left;
   line-height: 150%;
   letter-spacing: 2px;
-  padding-right: 12px;
+  padding-right: 24px;
   text-transform: uppercase;
 }
 
-select.drop {
+select {
+  -webkit-appearance: none;
   background-color: DarkSlateGrey;
-  font-family: 'Dosis';
-  width: auto;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.2em 6em 0.2em 1em;
+  text-transform: uppercase;
 }
