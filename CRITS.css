@@ -37,14 +37,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: auto;
   width: 250px;
 }
 
-.case > div {
-
-}
-  
 .center {
   display: flex;
   justify-content: center;
@@ -57,7 +53,7 @@
   background-color: AliceBlue;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);  
-  padding: 24px;
+  padding: 12px;
   margin: 24px;
   filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
   display: flex;
@@ -65,6 +61,7 @@
   align-items: center;
   justify-content:center;
   text-align: center; 
+  width: auto;
 }
 
 .drop {
