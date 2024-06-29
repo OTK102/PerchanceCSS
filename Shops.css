@@ -1,59 +1,13 @@
-.card {
-margin: 20px;
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows: repeat(12, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 25px;
+.layout {
+  width: 1920px;
+  height: 1080px;
 
-.outer {
-padding: 16px;
-width: auto; 
-height: auto; 
-background-color: pink;
-border-radius: 100px;
-border-top-left-radius: 10px;
-border-bottom-right-radius: 10px;
+  display: grid;
+  grid:
+    "Row1 side" 1fr
+    / 70% 30%;
+  gap: 8px;
 }
 
-.inner {
-background-color: white;
-padding: 16px;
-text-align: left;
-border-radius: 100px;
-border-top-left-radius: 10px;
-border-bottom-right-radius: 10px;
-}
-
-.header {
-font-size: 24px;
-line-height: 1.5px; 
-font-weight: 600; 
-color: #111827; 
-}
-
-.text {
-padding-bottom: 0.75px; 
-font-size: 14px;
-line-height: 1.25px; 
-color: #6B7280; 
-}
-
-.bottom {
-display: flex;
-justify-content: space-around; 
-align-items: center; 
-}
-
-.bottom-holder {
-display: flex; 
-gap: 40px; 
-color: #4B5563; 
-transition-duration: 200ms; 
-
-:hover {
- --transform-scale-x: 1.1;
---transform-scale-y: 1.1; 
-cursor: pointer; 
- }
-}
+.Row1 { grid-area: Row1; }
+.side { grid-area: side; }
